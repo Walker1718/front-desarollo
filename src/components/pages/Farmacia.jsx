@@ -80,8 +80,7 @@ const Farmacia = () => {
                     <Button onClick={ () => deleteFarmaciaMutation.mutate({id:farmacia.id}) } >Elimnar</Button>
                   </TableCell>
                   </TableRow>
-              ))
-              
+              ))  
             }
           </TableBody>
         </Table>

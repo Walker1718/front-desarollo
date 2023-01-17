@@ -29,7 +29,7 @@ const style = {
 };
 
 
-const AddFarmacia = ({edit,inputFarmacia}) => {
+const EditFarmacia = ({edit,inputFarmacia}) => {
     const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -79,4 +79,4 @@ const AddFarmacia = ({edit,inputFarmacia}) => {
   )
 }
 
-export default AddFarmacia
+export default EditFarmacia

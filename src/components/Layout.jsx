@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Container } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import CardMedia from "@mui/material/CardMedia";
 
 export default function Layout({ children }) {
   const navigate = useNavigate();
@@ -15,21 +16,24 @@ export default function Layout({ children }) {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              LOGO
-            </Typography>
+          <CardMedia 
+              sx={{ maxWidth: 50 }}
+              component="img"
+              height="50"
+              image="../images/logo.png"
+              alt="Logo"
+            />
+
+            <Button color="inherit" onClick={() => navigate('/centro-distribucion')}>
+              Centro distribucion
+            </Button>
             <Button color="inherit" onClick={() => navigate('/farmacia')}>
               Farmacia
             </Button>
             <Button color="inherit" onClick={() => navigate('/medicamento')}>
               Medicamento
             </Button>
-            <Button
-              color="inherit"
-              onClick={() => navigate('/centro-distribucion')}
-            >
-              Centro distribucion
-            </Button>
+            
           </Toolbar>
         </AppBar>
         {children}
